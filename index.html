@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic page setup: character set, phone scaling, tab title -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sawyer Dalton | Computer Science & Cybersecurity</title>
+  <meta name="description" content="Sawyer Dalton - CS junior at Embry-Riddle focused on cybersecurity and systems, seeking an internship.">
+
+  <!-- Fonts from Google Fonts (Inter for body text, Space Grotesk for headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- All styling lives in a separate file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER: name on the left, navigation links on the right ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">Sawyer Dalton</a>
+      <nav aria-label="Main">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="resume.pdf" class="btn btn-primary" download>Résumé PDF</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== HERO: the first thing a recruiter sees ===== -->
+    <section class="hero container">
+      <div class="hero-text">
+        <span class="badge"><span class="dot" aria-hidden="true"></span>Seeking a cybersecurity or systems internship</span>
+        <h1>Sawyer Dalton</h1>
+        <p class="lead">
+          I am a third year student Embry-Riddle Aeronautical University with Computer science a cybersecurity focus
+          and a minor in Systems Engineering. I've also been running my own home server and
+          building software systems with an AI-assisted development workflow.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">See my projects</a>
+          <a href="resume.pdf" class="btn btn-outline" download>Download résumé</a>
+        </div>
+      </div>
+      <!-- Profile Photo -->
+      <img src="profile.jpeg" class="hero-photo" alt="Photo of Sawyer Dalton">
+    </section>
+
+    <!-- ===== PROJECTS: one card per project, laid out in a grid ===== -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <p class="section-intro">Things I've built for class and on my own.</p>
+
+        <div class="project-grid">
+          <article class="card">
+            <span class="tag">systems</span>
+            <h3>Home Server &amp; Remote Dev Environment</h3>
+            <p>Converted an old PC into an Ubuntu Server host running a multiplayer game server for up
+              to 24 players through a Tailscale VPN and playit.gg tunnel, with no ports opened on my home network.
+              I also use it to write and run C programs from any device over SSH.</p>
+            <span class="tech">Ubuntu Server · Tailscale · SSH · playit.gg</span>
+          </article>
+
+          <article class="card">
+            <span class="tag">software</span>
+            <h3>AI-Assisted Development Workflow</h3>
+            <p>Designed a staged workflow that takes a project from a goals document to a design document,
+              implementation, and log-based verification, with human approval at each stage. Used it to
+              build 3 Minecraft mods that extend a large existing codebase.</p>
+            <span class="tech">Claude AI · Java · NeoForge · IntelliJ IDEA</span>
+          </article>
+
+          <article class="card">
+            <span class="tag">academic</span>
+            <h3>Team Game &amp; Line-Following Robot</h3>
+            <p>Designed gameplay algorithms for a team-built C# game, including a room difficulty generator,
+              and handled software design and coding for a line-following robot.</p>
+            <span class="tech">C# · Unity · Arduino</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS & EDUCATION ===== -->
+    <section id="skills" class="container skills">
+      <div>
+        <h2>Skills</h2>
+        <dl class="skill-list">
+          <dt>Languages</dt><dd>Java · Python · C · C# · MATLAB</dd>
+          <dt>Systems</dt><dd>Linux CLI · Ubuntu Server · Windows · SSH · Tailscale VPN</dd>
+          <dt>Leadership</dt><dd>Captain, Embry-Riddle Men's Rowing (38 athletes) · Captain, Sarasota Crew (150 athletes)</dd>
+          <dt>Tools</dt><dd>VS Code · IntelliJ IDEA · Git &amp; GitHub · Unity · Claude AI</dd>
+        </dl>
+      </div>
+      <div>
+        <h2>Education</h2>
+        <p><strong>Embry-Riddle Aeronautical University</strong>, Daytona Beach, FL</p>
+          B.S. Computer Science, Cybersecurity focus<br>
+          Minor in Systems Engineering</p>
+          Expected May 2028 · Honor Roll</p>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT: email link plus a copy-email button (script.js) ===== -->
+    <section id="contact" class="contact">
+      <div class="container contact-inner">
+        <div>
+          <h2>My Contacts</h2>
+          <p><a href="mailto:sawdalt13@gmail.com">sawdalt13@gmail.com</a></p>
+          <p>
+            <a href="https://github.com/Sawdalt" class="btn btn-light" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/sawyer-dalton-965703350" class="btn btn-light" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </p>
+        </div>
+
+        <!-- Copy-email button: script.js copies my address to the clipboard -->
+        <div class="copy-box">
+          <p>Prefer to copy my email?</p>
+          <button type="button" id="copy-email" class="btn btn-primary">Copy email address</button>
+          <!-- aria-live makes screen readers announce the result -->
+          <p id="copy-status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="container footer">© 2026 Sawyer Dalton</footer>
+
+  <!-- Script goes last so the page loads before it runs -->
+  <script src="script.js"></script>
+</body>
+</html>
